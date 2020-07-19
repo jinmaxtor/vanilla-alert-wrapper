@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--suppress JSUnresolvedLibraryURL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="toastr/toastr.css">
+    <link rel="stylesheet" href="sweetalert/sweetalert2.min.css">
+
+    <style type="text/css">
+        /* GLOBAL CSS VARIABLES */
+        :root {
+
+            /* MAIN COLORS */
+            --primary-color: gold;
+            --secondary-color: silver;
+            --light-color: skyblue;
+            --dark-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="toastr/toastr.js"></script>
+<script src="sweetalert/sweetalert2.min.js"></script>
+<script src="js/toastr-alert-component.js"></script>
+<script src="js/sweet-alert-component.js"></script>
+<script src="js/alert-component.js"></script>
+<script type="text/javascript">
+
+    let toastrComponent = new ToastrAlertComponent();
+    let sweetAlert = new SweetAlertComponent();
+    let alertComponent = new AlertComponent(sweetAlert);
+    alertComponent.success('este es el titulo success', 'esta es la descripcion');
+    /*alertComponent.error('este es el titulo error', 'esta es la descripcion');
+    alertComponent.warning('este es el titulo warning', 'esta es la descripcion');
+    alertComponent.info('este es el titulo info', 'esta es la descripcion');
+    alertComponent.primary('este es el titulo primary', 'esta es la descripcion');
+    alertComponent.secondary('este es el titulo secondary', 'esta es la descripcion');
+    alertComponent.light('este es el titulo light', 'esta es la descripcion');
+    alertComponent.dark('este es el titulo dark', 'esta es la descripcion');*/
+</script>
+</body>
+</html>
